@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>APIs sample - Barbara's portfolio</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "APIs sample";
+        var mkdocs_page_input_path = "APIs.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Barbara's portfolio
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">APIs sample</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#retrieving-menus">Retrieving Menus</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#url">URL</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#path-parameters">Path Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#query-parameters">Query Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#header-parameters">Header Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#body-parameters">Body Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sample-request">Sample Request</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#response-body">Response Body</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sample-response-body">Sample Response Body</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#code-samples">Code Samples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#status-and-error-codes">Status and Error Codes</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Architecture_guide/">Architecture guide</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Barbara's portfolio</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>APIs sample</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="menus-api-reference-material"><strong>Menus API Reference Material</strong></h1>
+<p>The Menus API contains the following endpoints:</p>
+<ul>
+<li><strong><code>GET /menu</code></strong></li>
+</ul>
+<h2 id="retrieving-menus"><strong>Retrieving Menus</strong></h2>
+<p>The method <strong><code>GET /menu</code></strong> enables you to retrieve the collection of menus created by the authenticating ally.</p>
+<h3 id="url"><strong>URL</strong></h3>
+<pre><code>https://services.mxgrability.rappi.com/api/v2/restaurants-integrations-public-api/menu
+</code></pre>
+<h3 id="path-parameters"><strong>Path Parameters</strong></h3>
+<p>No path parameters exist for this endpoint.</p>
+<h3 id="query-parameters"><strong>Query Parameters</strong></h3>
+<p>No query parameters exist for this endpoint</p>
+<h3 id="header-parameters"><strong>Header Parameters</strong></h3>
+<p>No header parameters exist for this endpoint</p>
+<h3 id="body-parameters"><strong>Body Parameters</strong></h3>
+<p>No body parameters exist for this endpoint.</p>
+<h3 id="sample-request"><strong>Sample Request</strong></h3>
+<p>The following is an example of an API request using this endpoint:</p>
+<pre><code>$ curl -X GET --header 'Accept:application/json' --header 'Authorization: Bearer &lt;access token&gt;'
+'https://microservices.dev.rappi.com/api/v2/restaurants-integrations-public-api/menu'
+</code></pre>
+<h3 id="response-body"><strong>Response Body</strong></h3>
+<p>The following table describes the elements included in the response body.</p>
+<table>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td colspan="5" ><strong>Element</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Type</strong>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="7" ><strong><code>storeId</code></strong>
+   </td>
+   <td>Identifier of the store in the Rappi application.
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td colspan="7" ><strong><code>items</code></strong>
+   </td>
+   <td>Product list
+   </td>
+   <td>Array of object
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4" >
+   </td>
+   <td colspan="3" ><strong><code>name</code></strong>
+   </td>
+   <td>Name of the product in the menu
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td colspan="5" >
+   </td>
+   <td colspan="2" ><strong><code>description</code></strong>
+   </td>
+   <td>Description of the product in the menu
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td colspan="6" >
+   </td>
+   <td><strong><code>sku</code></strong>
+   </td>
+   <td>SKU that the ally assigned for the product in the menu
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" >
+   </td>
+   <td colspan="4" ><strong><code>type</code></strong>
+   </td>
+   <td>Item type. In this case can be only PRODUCT
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4" >
+   </td>
+   <td colspan="3" ><strong><code>price</code></strong>
+   </td>
+   <td>Price of the product in the menu
+   </td>
+   <td>integer
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" >
+   </td>
+   <td colspan="5" ><strong><code>category</code></strong>
+   </td>
+   <td>Category of the product in the menu
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td colspan="2" >
+   </td>
+   <td colspan="4" ><strong><code>id</code></strong>
+   </td>
+   <td>The SKU (Stock-Keeping Unit) the ally gives to this category
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td colspan="5" ><strong><code>name</code></strong>
+   </td>
+   <td>Category name
+   </td>
+   <td>integer
+   </td>
+  </tr>
+</table>
+
+<h3 id="sample-response-body"><strong>Sample Response Body</strong></h3>
+<p>The following is an example of a typical response, showing all of the elements of the **<code>alerts</code></strong> resource object.</p>
+<pre><code>[
+  {
+    &quot;storeId&quot;: &quot;900111978&quot;,
+    &quot;items&quot;: [
+      {
+        &quot;name&quot;: &quot;Naked Cake con frutos&quot;,
+        &quot;description&quot;: &quot;Naked cake decorado con frutos. Cubierta de trufa derretida (ganache) y decorada con frutos del bosque.&quot;,
+        &quot;sku&quot;: &quot;8569874&quot;,
+        &quot;type&quot;: &quot;PRODUCT&quot;,
+        &quot;price&quot;: 75.0,
+        &quot;category&quot;: {
+          &quot;id&quot;: &quot;3&quot;,
+          &quot;name&quot;: &quot;Tortas&quot;,
+          &quot;minQty&quot;: 0,
+          &quot;maxQty&quot;: 0,
+          &quot;sortingPosition&quot;: 0
+        },
+        &quot;imageUrl&quot;: &quot;https://image.com/image1.jpg&quot;,
+        &quot;children&quot;: [
+          {
+            &quot;name&quot;: &quot;Chocolate&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;sku&quot;: &quot;8569874-159&quot;,
+            &quot;type&quot;: &quot;TOPPING&quot;,
+            &quot;price&quot;: 0.0,
+            &quot;category&quot;: {
+              &quot;id&quot;: &quot;1&quot;,
+              &quot;name&quot;: &quot;Sabor&quot;,
+              &quot;minQty&quot;: 0,
+              &quot;maxQty&quot;: 1,
+              &quot;sortingPosition&quot;: 0
+            },
+            &quot;imageUrl&quot;: &quot;https://image.com/image10.jpg&quot;,
+            &quot;children&quot;: [],
+            &quot;rappiIds&quot;: [&quot;340948822&quot;],
+            &quot;sortingPosition&quot;: 1,
+            &quot;maxLimit&quot;: 1
+          }
+        ],
+        &quot;rappiIds&quot;: [&quot;2135527868&quot;],
+        &quot;sortingPosition&quot;: 0,
+        &quot;maxLimit&quot;: 1
+      },
+      {
+        &quot;name&quot;: &quot;Snowman&quot;,
+        &quot;description&quot;: &quot;Linda lata de Snowman con productos variadosIncluye:Galletas mantequilla 350 gr, 6 brookies y 4 trufas de brownie.&quot;,
+        &quot;sku&quot;: &quot;856887&quot;,
+        &quot;type&quot;: &quot;PRODUCT&quot;,
+        &quot;price&quot;: 75.0,
+        &quot;category&quot;: {
+          &quot;id&quot;: &quot;9&quot;,
+          &quot;name&quot;: &quot;Navidad&quot;,
+          &quot;minQty&quot;: 0,
+          &quot;maxQty&quot;: 0,
+          &quot;sortingPosition&quot;: 0
+        },
+        &quot;imageUrl&quot;: &quot;https://image.com/image2.jpg&quot;,
+        &quot;children&quot;: [],
+        &quot;rappiIds&quot;: [&quot;2135524472&quot;],
+        &quot;sortingPosition&quot;: 0,
+        &quot;maxLimit&quot;: 1
+      }
+    ]
+  }
+]
+</code></pre>
+<h3 id="code-samples"><strong>Code Samples</strong></h3>
+<p>The following is an example (TBD)</p>
+<pre><code>
+URL url = new URL(&quot;https://microservices.dev.rappi.com/api/v2/restaurants-integrations-public-api/menu&quot;);
+
+HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+connection.setRequestMethod(&quot;GET&quot;);
+connection.setRequestProperty(&quot;User-Agent&quot;, &quot;Mozilla/5.0&quot;);
+connection.setRequestProperty(&quot;Content-Type&quot;, &quot;application/json&quot;);
+connection.setRequestProperty(&quot;Accept&quot;, &quot;application/json&quot;);
+connection.setRequestProperty(&quot;x-authorization&quot;, &quot;bearer YOUR_TOKEN&quot;);
+
+try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8))) {
+    StringBuilder response = new StringBuilder();
+    String responseLine;
+    while ((responseLine = br.readLine()) != null) {
+        response.append(responseLine.trim());
+    }
+    System.out.println(&quot;Response body: &quot; + response.toString());
+}
+System.out.println(&quot;Response Code : &quot; + connection.getResponseCode());
+
+</code></pre>
+<h3 id="status-and-error-codes">Status and Error Codes</h3>
+<p>The following table contains the status codes of the response for this endpoint:</p>
+<table>
+  <tr>
+   <td><strong>Code</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>200
+   </td>
+   <td>Success
+   </td>
+  </tr>
+  <tr>
+   <td>401
+   </td>
+   <td> Invalid Credentials
+   </td>
+  </tr>
+</table>
+
+<h1 id="orders-api-reference-material"><strong>Orders API Reference Material</strong></h1>
+<p>The Orders API contains the following endpoints:</p>
+<ul>
+<li>**<code>PUT /orders</code></strong></li>
+</ul>
+<h2 id="retrieving-orders"><strong>Retrieving Orders</strong></h2>
+<p>Use this endpoint to take an order, so the store commences preparing it.</p>
+<h3 id="url_1"><strong>URL</strong></h3>
+<pre><code>https://services.mxgrability.rappi.com/api/v2/restaurants-integrations-public-api/orders/{orderId}/take/{cookingTime}
+</code></pre>
+<h3 id="path-parameters_1"><strong>Path Parameters</strong></h3>
+<p>This resource has the following properties:</p>
+<p>esponse formats:    JSONR</p>
+<p>Authentication requirements:    Token</p>
+<p>PARAMETERS</p>
+<p>This endpoint does not permit additional parameters.</p>
+<h3 id="query-parameters_1"><strong>Query Parameters</strong></h3>
+<p>No query parameters exist for this endpoint</p>
+<h3 id="header-parameters_1"><strong>Header Parameters</strong></h3>
+<table>
+  <tr>
+   <td><strong>Parameter</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Type</strong>
+   </td>
+   <td><strong>Required/Optional</strong>
+   </td>
+   <td><strong>Notes</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong><code>Accept</code></strong>
+   </td>
+   <td>Specifies the developer’s access token.
+   </td>
+   <td>string
+   </td>
+   <td>Required
+   </td>
+   <td>Bearer<code> &lt;access_token></code>
+<p>
+The <span style="text-decoration:underline;">Authorization Procedure</span> documents how to get an access token. 
+   </td>
+  </tr>
+  <tr>
+   <td><strong><code>Authorization</code></strong>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+</table>
+
+<p>Acc</p>
+<p>--header ‘Accept:application/json’ --header ‘Authorization: Bearer &lt;access token&gt;’</p>
+<h3 id="body-parameters_1"><strong>Body Parameters</strong></h3>
+<p>No body parameters exist for this endpoint.</p>
+<h3 id="sample-request_1"><strong>Sample Request</strong></h3>
+<p>The following is an example of an API request using this endpoint:</p>
+<pre><code>$ curl -X PUT --header 'Accept:application/json' --header 'Authorization: Bearer &lt;access token&gt;'
+'https://microservices.dev.rappi.com/api/v2/restaurants-integrations-public-api/orders/392625/take/20'
+</code></pre>
+<h3 id="response-body_1"><strong>Response Body</strong></h3>
+<p>The following table describes the elements included in the response body.</p>
+<table>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td colspan="5" ><strong>Element</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Type</strong>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="7" ><strong><code>storeId</code></strong>
+   </td>
+   <td>Identifier of the store in the Rappi application.
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td colspan="7" ><strong><code>items</code></strong>
+   </td>
+   <td>Product list
+   </td>
+   <td>Array of object
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4" >
+   </td>
+   <td colspan="3" ><strong><code>name</code></strong>
+   </td>
+   <td>Name of the product in the menu
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td colspan="5" >
+   </td>
+   <td colspan="2" ><strong><code>description</code></strong>
+   </td>
+   <td>Description of the product in the menu
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td colspan="6" >
+   </td>
+   <td><strong><code>sku</code></strong>
+   </td>
+   <td>SKU that the ally assigned for the product in the menu
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" >
+   </td>
+   <td colspan="4" ><strong><code>type</code></strong>
+   </td>
+   <td>Item type. In this case can be only PRODUCT
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4" >
+   </td>
+   <td colspan="3" ><strong><code>price</code></strong>
+   </td>
+   <td>Price of the product in the menu
+   </td>
+   <td>integer
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" >
+   </td>
+   <td colspan="5" ><strong><code>category</code></strong>
+   </td>
+   <td>Category of the product in the menu
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td colspan="2" >
+   </td>
+   <td colspan="4" ><strong><code>id</code></strong>
+   </td>
+   <td>The SKU (Stock-Keeping Unit) the ally gives to this category
+   </td>
+   <td>string
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td colspan="5" ><strong><code>name</code></strong>
+   </td>
+   <td>Category name
+   </td>
+   <td>integer
+   </td>
+  </tr>
+</table>
+
+<h3 id="sample-response-body_1"><strong>Sample Response Body</strong></h3>
+<p>The following is an example of a typical response, showing all of the elements of the **<code>alerts</code></strong> resource object.</p>
+<pre><code>[
+  {
+    &quot;storeId&quot;: &quot;900111978&quot;,
+    &quot;items&quot;: [
+      {
+        &quot;name&quot;: &quot;Naked Cake con frutos&quot;,
+        &quot;description&quot;: &quot;Naked cake decorado con frutos. Cubierta de trufa derretida (ganache) y decorada con frutos del bosque.&quot;,
+        &quot;sku&quot;: &quot;8569874&quot;,
+        &quot;type&quot;: &quot;PRODUCT&quot;,
+        &quot;price&quot;: 75.0,
+        &quot;category&quot;: {
+          &quot;id&quot;: &quot;3&quot;,
+          &quot;name&quot;: &quot;Tortas&quot;,
+          &quot;minQty&quot;: 0,
+          &quot;maxQty&quot;: 0,
+          &quot;sortingPosition&quot;: 0
+        },
+        &quot;imageUrl&quot;: &quot;https://image.com/image1.jpg&quot;,
+        &quot;children&quot;: [
+          {
+            &quot;name&quot;: &quot;Chocolate&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;sku&quot;: &quot;8569874-159&quot;,
+            &quot;type&quot;: &quot;TOPPING&quot;,
+            &quot;price&quot;: 0.0,
+            &quot;category&quot;: {
+              &quot;id&quot;: &quot;1&quot;,
+              &quot;name&quot;: &quot;Sabor&quot;,
+              &quot;minQty&quot;: 0,
+              &quot;maxQty&quot;: 1,
+              &quot;sortingPosition&quot;: 0
+            },
+            &quot;imageUrl&quot;: &quot;https://image.com/image10.jpg&quot;,
+            &quot;children&quot;: [],
+            &quot;rappiIds&quot;: [&quot;340948822&quot;],
+            &quot;sortingPosition&quot;: 1,
+            &quot;maxLimit&quot;: 1
+          }
+        ],
+        &quot;rappiIds&quot;: [&quot;2135527868&quot;],
+        &quot;sortingPosition&quot;: 0,
+        &quot;maxLimit&quot;: 1
+      },
+      {
+        &quot;name&quot;: &quot;Snowman&quot;,
+        &quot;description&quot;: &quot;Linda lata de Snowman con productos variadosIncluye:Galletas mantequilla 350 gr, 6 brookies y 4 trufas de brownie.&quot;,
+        &quot;sku&quot;: &quot;856887&quot;,
+        &quot;type&quot;: &quot;PRODUCT&quot;,
+        &quot;price&quot;: 75.0,
+        &quot;category&quot;: {
+          &quot;id&quot;: &quot;9&quot;,
+          &quot;name&quot;: &quot;Navidad&quot;,
+          &quot;minQty&quot;: 0,
+          &quot;maxQty&quot;: 0,
+          &quot;sortingPosition&quot;: 0
+        },
+        &quot;imageUrl&quot;: &quot;https://image.com/image2.jpg&quot;,
+        &quot;children&quot;: [],
+        &quot;rappiIds&quot;: [&quot;2135524472&quot;],
+        &quot;sortingPosition&quot;: 0,
+        &quot;maxLimit&quot;: 1
+      }
+    ]
+  }
+]
+</code></pre>
+<h3 id="code-samples_1"><strong>Code Samples</strong></h3>
+<p>The following is an example (TBD)</p>
+<pre><code>
+URL url = new URL(&quot;https://microservices.dev.rappi.com/api/v2/restaurants-integrations-public-api/menu&quot;);
+
+HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+connection.setRequestMethod(&quot;GET&quot;);
+connection.setRequestProperty(&quot;User-Agent&quot;, &quot;Mozilla/5.0&quot;);
+connection.setRequestProperty(&quot;Content-Type&quot;, &quot;application/json&quot;);
+connection.setRequestProperty(&quot;Accept&quot;, &quot;application/json&quot;);
+connection.setRequestProperty(&quot;x-authorization&quot;, &quot;bearer YOUR_TOKEN&quot;);
+
+try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8))) {
+    StringBuilder response = new StringBuilder();
+    String responseLine;
+    while ((responseLine = br.readLine()) != null) {
+        response.append(responseLine.trim());
+    }
+    System.out.println(&quot;Response body: &quot; + response.toString());
+}
+System.out.println(&quot;Response Code : &quot; + connection.getResponseCode());
+
+</code></pre>
+<h3 id="status-and-error-codes_1">Status and Error Codes</h3>
+<p>The following table contains the status codes of the response for this endpoint:</p>
+<table>
+  <tr>
+   <td><strong>Code</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>200
+   </td>
+   <td>Order successfully taken
+   </td>
+  </tr>
+  <tr>
+   <td>400
+   </td>
+   <td>Invalid state transition
+   </td>
+  </tr>
+  <tr>
+   <td>401
+   </td>
+   <td>Invalid credentials
+   </td>
+  </tr>
+  <tr>
+   <td>404
+   </td>
+   <td>Order not found
+   </td>
+  </tr>
+</table>
+
+<h1 id="jokes-paid">Jokes Paid</h1>
+<h2 id="search-for-joke">Search for Joke</h2>
+<h3 id="search-for-jokes-with-key-word">Search for jokes with key word</h3>
+<p>You can search for jokes with a given keyword. To get a joke with the term knock knock in it add a parameter "query=knock knock" to the call and it will return a random joke with pattern "knock knock" in it.</p>
+<h3 id="path-parameters_2"><strong>Path Parameters</strong></h3>
+<p>No path parameters exist for this endpoint.</p>
+<h3 id="query-parameters_2"><strong>Query Parameters</strong></h3>
+<p>There is a query parameter in this endpoint</p>
+<h3 id="header-parameters_2"><strong>Header Parameters</strong></h3>
+<p>No header parameters exist for this endpoint</p>
+<h3 id="body-parameters_2"><strong>Body Parameters</strong></h3>
+<p>No body parameters exist for this endpoint.</p>
+<h3 id="sample-request_2"><strong>Sample Request</strong></h3>
+<p>The following is an example of an API request using this endpoint:</p>
+<pre><code>$ curl -X PUT --header 'Accept:application/json' --header 'content-type:application/jason' --header 'X-JokesOne-Api-Secret: api_key'
+&quot;https://api.jokes.one/joke/search?query=knock-knock&quot;
+</code></pre>
+<h3 id="response-query"><strong>Response query</strong></h3>
+<table>
+  <tr>
+   <td colspan="3" ><strong>Parameter</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Type</strong>
+   </td>
+   <td><strong>Required/Optional</strong>
+   </td>
+   <td><strong>Notes</strong>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" ><strong><code>success</code></strong>
+   </td>
+   <td>Specifies the success of finding a joke
+   </td>
+   <td>string
+   </td>
+   <td>Required
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" >
+   </td>
+   <td><strong><code>total</code></strong>
+   </td>
+   <td>It show the total ok jokes 
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" ><strong><code>contents</code></strong>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" >
+   </td>
+   <td><strong><code>jokes</code></strong>
+   </td>
+   <td>
+   </td>
+   <td>list
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><strong><code>title</code></strong>
+   </td>
+   <td>The name of the joke
+   </td>
+   <td>string
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><strong><code>lenght</code></strong>
+   </td>
+   <td>Number of characters 
+   </td>
+   <td>string
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><strong><code>clean</code></strong>
+   </td>
+   <td>Indicate if the joke is clean, if the whole family can read it  
+   </td>
+   <td>string
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><strong><code>racial</code></strong>
+   </td>
+   <td>Indicate if the joke have some content racial 
+   </td>
+   <td>string
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><strong><code>id</code></strong>
+   </td>
+   <td>Specifies the id of the joke 
+   </td>
+   <td>string
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><strong><code>text</code></strong>
+   </td>
+   <td>
+   </td>
+   <td>string
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" >
+   </td>
+   <td><strong><code>copyright</code></strong>
+   </td>
+   <td>
+   </td>
+   <td>string
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+</table>
+
+<h3 id="sample-response-body_2"><strong>Sample Response Body</strong></h3>
+<p>The following is an example of joke you GET </p>
+<pre><code>{
+  &quot;success&quot;: {
+    &quot;total&quot;: 1
+  },
+  &quot;contents&quot;: {
+    &quot;jokes&quot;: [
+      {
+        &quot;title&quot;: &quot;Useless Elephant&quot;,
+        &quot;length&quot;: &quot;64&quot;,
+        &quot;clean&quot;: &quot;0&quot;,
+        &quot;racial&quot;: &quot;0&quot;,
+        &quot;id&quot;: &quot;2cT1g9kqoeCO9FqhRnHObgeF&quot;,
+        &quot;text&quot;: &quot;What do you call an elephant that doesn't matter? An irrelephant&quot;
+      }
+    ],
+    &quot;copyright&quot;: &quot;2019-20 https://jokes.one&quot;
+  }
+}
+
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Architecture_guide/" class="btn btn-neutral float-right" title="Architecture guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Architecture_guide/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

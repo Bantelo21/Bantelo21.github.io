@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Architecture guide - Barbara's portfolio</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Architecture guide";
+        var mkdocs_page_input_path = "Architecture_guide.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Barbara's portfolio
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../APIs/">APIs sample</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Architecture guide</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#diagram">Diagram</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#end-user-id1">End User {#id1}</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frontend">Frontend</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#backend">Backend</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#database">Database</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Barbara's portfolio</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>Architecture guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="activity-documenting-a-software-architecture">Activity  - Documenting a Software Architecture</h1>
+<p>Complete the missing descriptions (text in blue) of the Documenting a Software Architecture document using the architecture displayed below. Focus on the <strong>Overview</strong>, <strong>End User</strong>, <strong>Frontend</strong>, and <strong>Database</strong> sections. </p>
+<p><strong>Time 20 min.</strong></p>
+<h2 id="overview">Overview</h2>
+<p>This guide provides a high-level description of the <strong>Youtube</strong> software architecture. The description explains how the architecture works and the elements, properties, and relationships that it contains. </p>
+<p>The YouTube application is a cloud-based platform that includes the following main components:</p>
+<ul>
+<li><a href="#id1">End User</a></li>
+<li><a href="#heading=h.7e1usg8pb772">Frontend</a></li>
+<li><a href="#heading=h.gmph9zcqqji1">Backend</a></li>
+<li><a href="#heading=h.lt6s188ll2ru">Database</a></li>
+</ul>
+<p>This structure facilitates the data flow from the database to the end user and back. In the next section you can find detailed information about how these elements interact. </p>
+<h2 id="diagram">Diagram</h2>
+<p>The following diagram illustrates the high-level architecture of the YouTube application:</p>
+<p><img alt="Alt text" src="../image2.png" /></p>
+<p><strong>Figure 1. High-Level Architecture of the YouTube Application</strong></p>
+<p>The Youtube architecture comprises the following elements, properties, and relationships:</p>
+<h3 id="end-user-id1">End User {#id1}</h3>
+<p>In the Youtube application, the User comprises the following properties and relationships: </p>
+<ul>
+<li><strong>Properties</strong>: Enters <a href="www.youtube.com">www.youtube.com</a> to watch a video. </li>
+<li><strong>Relationships</strong>: It has a bidirectional relationship with the Frontend. The user sends a request and receives content through the Web Browser.  \</li>
+</ul>
+<h3 id="frontend">Frontend</h3>
+<p>In the youtube application, comprises the following properties and relationships:</p>
+<ul>
+<li><strong>Properties</strong>: It renders static and dynamic content in the Web Browser </li>
+<li><strong>Relationships</strong>: It has bidirectional relationships with the End User and with the Backend. With the End User, the Frontend receives requests of a specific video and sends dynamic and static content as a response. With the Backend, the Frontend sends video requests and receives dynamic and static content as a response to display at the Web Browser. \</li>
+</ul>
+<h3 id="backend">Backend</h3>
+<p>In the Youtube application, the Backend comprises the following properties and relationships:</p>
+<ul>
+<li><strong>Properties</strong>: It handles video requests and pulls such content from the Database. </li>
+<li><strong>Relationships</strong>: It has bidirectional relationships with the Frontend and with the Database. With the Frontend, the Backend receives requests and sends dynamic and static content as a response. With the Database, the Backend sends requests and receives dynamic and static content as a response.</li>
+</ul>
+<h3 id="database">Database</h3>
+<p>In the Youtube application, the Database comprises the following properties and relationships: </p>
+<ul>
+<li><strong>Properties</strong>: It contains static and dynamic content such as videos, titles, and user names.</li>
+<li><strong>Relationships</strong>: It has a bidirectional relationship with the Backend. With the Backend, the Database receives video requests, and sends back the dynamic and static content.</li>
+</ul>
+<h1 id="plagiarism-detection-architecture-diagram">Plagiarism Detection Architecture Diagram</h1>
+<p><img alt="Alt text" src="../image1.png" /></p>
+<h2 id="users">Users</h2>
+<p>In the Plagiarism Detection Architecture Diagram, the Users have the following properties and relationships:</p>
+<ul>
+<li><strong>Properties</strong>: Send the documents to detect plagiarism.</li>
+<li><strong>Relationship</strong>: The Users send documents toAmazon Simple Storage Service (Amazon S3) to run plagiarism detection on them.</li>
+</ul>
+<h2 id="aws-cloud">AWS Cloud</h2>
+<p>In the Plagiarism Detection Architecture Diagram, the AWS Cloud comprises the following elements, properties, and relationships:</p>
+<ul>
+<li><strong><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html">Amazon S3</a></strong>: Cloud storage to place the documents that the user sent.<ul>
+<li><strong>Properties</strong>: Amazon S3 event triggers start of AWS Step Functions workflow.</li>
+<li><strong>Relationship</strong>: It has a one direction relationship with the user, and a bidirectional relationship with the AWS Lambda. </li>
+</ul>
+</li>
+<li><strong><a href="https://docs.aws.amazon.com/eventbridge/">Amazon EventBridge</a></strong>: Communicates the results of the plagiarism detection to the Users.<ul>
+<li><strong>Properties</strong>: Based on the configured similarity threshold that is compared against the OpenSearch Service query result score, an event bridge event is raised, specifying source document information that has possibly been plagiarized with reference to relevant works.</li>
+<li><strong>Relationship</strong>: It has a directional relationship with the last AWS Lambda executed.</li>
+</ul>
+</li>
+</ul>
+<h2 id="aws-steps-functions-workflow">AWS steps functions workflow</h2>
+<p>In the Plagiarism Detection Architecture Diagram, the AWS steps Functions Workflow comprises the following properties and relationships:</p>
+<h3 id="aws-lambda">AWS Lambda</h3>
+<ul>
+<li><strong>Properties</strong>: AWS Lambda function extracts text from document using Tika (a content analysis toolkit that detects and extracts metadata and text from over a thousand different file types.</li>
+<li><strong>Relationship</strong>: It has a bidirectional relationship with Amazon S3 and Amazon SageMaker, and a directional relationship to others AWS Lambda through the procedure.</li>
+</ul>
+<h2 id="vcp">VCP</h2>
+<p>In the Plagiarism Detection Architecture Diagram, the VCP comprises the following properties and relationships:</p>
+<h3 id="amazon-opensearch-service">Amazon OpenSearch Service</h3>
+<ul>
+<li><strong>Properties</strong>: Amazon OpenSearch Service (OpenSearch Service) domain stores an index of pre-processed works that have been converted into word embedding vectors and indexed.</li>
+<li><strong>Relationship</strong>: It has a directional relationship that came from one of the AWS Lambda functions.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../APIs/" class="btn btn-neutral float-left" title="APIs sample"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../APIs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
